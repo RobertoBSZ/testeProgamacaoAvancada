@@ -50,3 +50,6 @@ Iniciando o Prisma com SQLite
   npx prisma init --datasource-provider sqlite
 Criando o banco de dados SQLite
   npx prisma migrate dev --name init
+-------
+.env
+DATABASE_URL="file:./dev/db"
