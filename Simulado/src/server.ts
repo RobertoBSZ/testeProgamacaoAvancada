@@ -14,10 +14,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use('/api/pacientes', pacienteRouter);
-app.use('/api/secretarias', secretariaRouter);
-app.use('/api/consultas', consultaRouter);
-app.use('/api/agendas', agendaRouter);
+app.use('/api/paciente', pacienteRouter);
+app.use('/api/secretaria', secretariaRouter);
+app.use('/api/consulta', consultaRouter);
+app.use('/api/agenda', agendaRouter);
 
 app.get('/', (req, res) => {
   res.send('Seu servidor está funcionando!');

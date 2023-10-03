@@ -15,10 +15,10 @@ const prisma = new client_1.PrismaClient();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 app.use(express_1.default.json());
-app.use('/api/pacientes', pacienteRouters_1.default);
-app.use('/api/secretarias', secretariaRouters_1.default);
-app.use('/api/consultas', consultaRoutes_1.default);
-app.use('/api/agendas', agendaRoutes_1.default);
+app.use('/api/paciente', pacienteRouters_1.default);
+app.use('/api/secretaria', secretariaRouters_1.default);
+app.use('/api/consulta', consultaRoutes_1.default);
+app.use('/api/agenda', agendaRoutes_1.default);
 app.get('/', (req, res) => {
     res.send('Seu servidor está funcionando!');
 });

@@ -3,10 +3,10 @@ import PacienteController from '../controllers/pacienteController';
 
 const router = express.Router();
 
-router.post('/pacientes', PacienteController.criarPaciente);
-router.get('/pacientes', PacienteController.listarPacientes);
-router.get('/pacientes/:id', PacienteController.lerPaciente);
-router.put('/pacientes/:id', PacienteController.atualizarPaciente);
-router.delete('/pacientes/:id', PacienteController.deletarPaciente);
+router.post('/criar', PacienteController.criarPaciente);
+router.get('/listar', PacienteController.listarPacientes);
+router.get('/ler/:id', PacienteController.lerPaciente);
+router.put('/atualizar/:id', PacienteController.atualizarPaciente);
+router.delete('/deletar/:id', PacienteController.deletarPaciente);
 
 export default router;
