@@ -1,0 +1,52 @@
+https://www.prisma.io/docs/getting-started/quickstart
+https://www.npmjs.com/package/express
+
+{
+    "recommendations": [
+        "rangav.vscode-thunder-client",
+        "vscode-icons-team.vscode-icons",
+        "qwtel.sqlite-viewer",
+        "prisma.prisma-insider",
+        "prisma.prisma",
+        "esbenp.prettier-vscode",
+        "sdras.night-owl"
+    ]
+}
+
+
+Iniciando o node:
+  npm init -y
+Instalando o express:
+  npm install express
+  npm i --save-dev @types/express
+Instalando Typescript
+  npm install typescript ts-node @types/node --save-dev
+  npx tsc --init
+
+Substituir no package.json
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "predev": "npx tsc",
+      "dev": "node ./dist/server.js"
+    },
+
+Substituir no tsconfig.json
+  {
+    "compilerOptions": {
+      "target": "ES2018",
+      "module": "commonJS",
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+    }
+  }
+
+Instalando o Prisma:
+  npm install prisma --save-dev 
+Iniciando o Prisma com SQLite
+  npx prisma init --datasource-provider sqlite
+Criando o banco de dados SQLite
+  npx prisma migrate dev --name init
